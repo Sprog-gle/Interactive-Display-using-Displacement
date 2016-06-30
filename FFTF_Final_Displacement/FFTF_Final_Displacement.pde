@@ -23,9 +23,9 @@ float kickSize, snareSize, hatSize;
 
 
 void setup() {
-  size(720, 480);
-  video = new Capture(this, 720, 480);
-  opencv = new OpenCV(this, 720, 480);
+  fullScreen();
+  video = new Capture(this, width, height);
+  opencv = new OpenCV(this, width, height);
   video.start();
   opencv.startBackgroundSubtraction(5, 3, 0.5);
   
@@ -60,7 +60,7 @@ color randomStrokeColour(){
   
   return strokeColour;
 }
-}
+
 
 //void screenGradient(){
 
